@@ -4,13 +4,24 @@ html
     link(rel="stylesheet", href="d3.css")
   body
     div.row
-      div.large-10.columns.large-centered.panel.radius#title
-    div.row
       div.large-10.columns.large-centered.panel.radius#scatter
+        input(type="text", id="scatterName", )
+        button(class="success tiny radius", id="scatterButton")
+          | give chart a name
+        button(class="success tiny radius", id="generateData")
+          | generateData()
+        button(class="success tiny radius", id="drawSVG")
+          | drawScatterSVG()
+        button(class="success tiny radius", id="render")
+          | render()
+        button(class="success tiny radius", id="labels")
+          | labels()
+        button(class="success tiny radius", id="axis")
+          | axis()
+        div#data
 
     script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
     script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
     script(src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js")
     script(src="js/scatterPlot.js")
-
-

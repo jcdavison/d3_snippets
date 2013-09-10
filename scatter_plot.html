@@ -6,14 +6,21 @@
   </head>
   <body>
     <div class="row">
-      <div id="title" class="large-10 columns large-centered panel radius"></div>
-    </div>
-    <div class="row">
-      <div id="scatter" class="large-10 columns large-centered panel radius"></div>
+      <div id="scatter" class="large-10 columns large-centered panel radius">
+        <input type="text" id="scatterName"/>
+        <button id="scatterButton" class="success tiny radius">give chart a name</button>
+        <button id="generateData" class="success tiny radius">generateData()</button>
+        <button id="drawSVG" class="success tiny radius">drawScatterSVG()</button>
+        <button id="render" class="success tiny radius">render()</button>
+        <button id="labels" class="success tiny radius">labels()</button>
+        <button id="axis" class="success tiny radius">axis()</button>
+        <div id="data"></div>
+      </div>
     </div>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <script src="js/scatterPlot.js"></script>
   </body>
 </html>

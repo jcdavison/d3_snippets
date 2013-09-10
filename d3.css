@@ -1,8 +1,21 @@
-
-#target {
-}
-
 .rect {
   opacity: .5;
   stroke: #336699;
+}
+
+.scatter {
+  stroke: #336699;
+  stroke-width: 2px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
 }

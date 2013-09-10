@@ -46,6 +46,15 @@
       "outputAbbreviatedPath" : "\/skeleton.html",
       "fileType" : 512
     },
+    "\/foundation.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/foundation.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/js\/basicd3.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -57,15 +66,6 @@
       "outputAbbreviatedPath" : "\/js\/basicd3.js",
       "outputStyle" : 0,
       "fileType" : 32
-    },
-    "\/foundation.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/foundation.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/js\/barChart.js" : {
       "ignoreWasSetByUser" : 0,
@@ -98,6 +98,15 @@
       "outputAbbreviatedPath" : "\/scatter_plot.html",
       "fileType" : 512
     },
+    "\/d3.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/d3.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/bar_chart.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -108,15 +117,6 @@
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/bar_chart.html",
       "fileType" : 512
-    },
-    "\/d3.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/d3.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/d3.css" : {
       "ignoreWasSetByUser" : 0,
@@ -138,21 +138,21 @@
       "outputAbbreviatedPath" : "\/js\/scatterPlot-ck.js",
       "fileType" : 64
     },
-    "\/skeleton.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/skeleton.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/scatter_plot.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/scatter_plot.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/skeleton.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/skeleton.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
