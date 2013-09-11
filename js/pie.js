@@ -1,4 +1,3 @@
-console.log("this is working")
 // dimensions of our pie chart
 var h = 500,
     w = 500;
@@ -22,41 +21,82 @@ var dataset = d3.range(6)
 var pie = d3.layout.pie();
 
 var pieChart = d3.select("#jspiechart")
-  .append("svg")
-  .attr({
-    'width' : w,
-    'height' : h
-  });
+                .append("svg")
+                .attr({
+                  'width' : w,
+                  'height' : h
+                });
 
 var color = d3.scale.category10();
 
 var wedges = pieChart.selectAll("g")
-  .data(pie(dataset))
-  .enter()
-  .append("g")
-  .attr({
-    'class' : 'wedge',
-    'transform' : 'translate(' + oRadius + ', ' + oRadius + ')'
-  });
+                     .data(pie(dataset))
+                     .enter()
+                     .append("g")
+                     .attr({
+                       'class' : 'wedge',
+                       'transform' : 'translate(' + oRadius + ', ' + oRadius + ')'
+                     });
 
   wedges.append("path")
-    .attr({
-      'fill' : function(d,i) {
-        console.log("thisis color")
-        console.log(i)
-        console.log( color(i) )
-        return color(i)
-      },
-      'd' : arc
-    });
+        .attr({
+          'fill' : function(d,i) {
+            return color(i)
+          },
+          'd' : arc
+        });
 
-  wedges.append('text')
-    .attr({
-      'transform' : function (d) {
-        return 'translate(' + arc.centroid(d) + ')';
-      },
-      'text-anchor' : 'middle'
-    })
-    .text( function(d) {
-      return d.value;
-    })
+var labels =  wedges.append('text')
+                    .attr({
+                      'transform' : function (d) {
+                        return 'translate(' + arc.centroid(d) + ')';
+                      },
+                      'text-anchor' : 'middle'
+                    })
+                    .text( function(d) {
+                      return d.value;
+                    })
+
+// wrap data generation in a function
+var getData = function() {
+    var data = d3.range(6)
+                .map(function(index){
+                    return Math.floor(Math.random() * 50);
+                });
+    return data;
+}
+
+// bind this function to the click event of the button
+var updatePie = function() {
+    var newData = getData();
+
+    wedges.data(pie(newData)) // pass in our 'pie-ized' data
+          .select('path')
+          .transition()
+          .duration(1000)
+          .ease('bounce')
+          .attr({
+              'fill' : function(d,i) {
+                  return color(i);
+              },
+              'd' : arc
+          });
+
+    //Labels
+
+
+    labels.data(pie(newData))
+          .transition()
+          .duration(1000)
+          .attr({
+              'transform' : function(d) {
+                  console.log("this is d")
+                  console.log(d)
+                  return 'translate(' + arc.centroid(d) + ')';
+              },
+              'text-anchor' : 'middle'
+          })
+          .text(function(d){
+                return d.value;
+          });
+}
