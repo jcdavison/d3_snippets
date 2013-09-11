@@ -28,8 +28,20 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/pie_chart.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
+    },
+    "\/js\/scatterPlot.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/scatterPlot.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/scatterPlot.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     },
     "\/foundation.css" : {
       "ignoreWasSetByUser" : 0,
@@ -39,17 +51,6 @@
       "inputAbbreviatedPath" : "\/foundation.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
-    },
-    "\/bar_chart.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bar_chart.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/bar_chart.html",
-      "fileType" : 512
     },
     "\/js\/pieChart.js" : {
       "ignoreWasSetByUser" : 0,
@@ -69,21 +70,21 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/js\/barChart.coffee",
       "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
+      "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/barChart.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/barChart.js" : {
+    "\/bar_chart.jade" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/barChart.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/barChart-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/bar_chart.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/bar_chart.html",
+      "fileType" : 512
     },
     "\/d3.css" : {
       "ignoreWasSetByUser" : 0,
@@ -93,18 +94,6 @@
       "inputAbbreviatedPath" : "\/d3.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
-    },
-    "\/js\/scatterPlot.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/scatterPlot.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
-      "outputAbbreviatedPath" : "\/js\/scatterPlot.js",
-      "outputStyle" : 0,
-      "fileType" : 32
     },
     "\/js\/pie-ck.js" : {
       "ignoreWasSetByUser" : 0,
@@ -117,13 +106,24 @@
       "outputAbbreviatedPath" : "\/js\/pie-ck-ck.js",
       "fileType" : 64
     },
+    "\/js\/barChart.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/barChart.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/barChart-ck.js",
+      "fileType" : 64
+    },
     "\/scatter_plot.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/scatter_plot.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
     "\/bar_chart.html" : {
@@ -132,7 +132,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bar_chart.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
     "\/js\/basicd3.coffee" : {
@@ -142,7 +142,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/js\/basicd3.coffee",
       "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
+      "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/basicd3.js",
       "outputStyle" : 0,
       "fileType" : 32
@@ -154,7 +154,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/js\/pieChart.coffee",
       "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
+      "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/js\/pieChart.js",
       "outputStyle" : 0,
       "fileType" : 32
@@ -170,6 +170,15 @@
       "outputAbbreviatedPath" : "\/js\/underscore-ck.js",
       "fileType" : 64
     },
+    "\/d3.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/d3.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/js\/pie.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -180,15 +189,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/pie-ck.js",
       "fileType" : 64
-    },
-    "\/d3.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/d3.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/skeleton.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -201,16 +201,14 @@
       "outputAbbreviatedPath" : "\/skeleton.html",
       "fileType" : 512
     },
-    "\/js\/basicd3.js" : {
+    "\/skeleton.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/basicd3.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/basicd3-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/skeleton.html",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 2048
     },
     "\/pie_chart.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -234,14 +232,16 @@
       "outputAbbreviatedPath" : "\/js\/scatterPlot-ck.js",
       "fileType" : 64
     },
-    "\/skeleton.html" : {
+    "\/js\/basicd3.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/skeleton.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/js\/basicd3.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/basicd3-ck.js",
+      "fileType" : 64
     }
   },
   "manualImportLinks" : [
@@ -266,7 +266,7 @@
     "genericWebpageFileExtensionsString" : "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
     "lessStrictUnits" : 0,
     "lessStrictMath" : 0,
-    "coffeeMinifyOutput" : 1,
+    "coffeeMinifyOutput" : 0,
     "javascriptOutputSuffix" : "-ck",
     "jadeOutputStyle" : 0,
     "coffeeAutoOutputPathStyle" : 0,
@@ -421,8 +421,8 @@
   },
   "projectAttributes" : {
     "bourbonEnabled" : 0,
-    "displayValue" : "d3",
-    "displayValueWasSetByUser" : 0,
+    "displayValue" : "d3_snippets",
+    "displayValueWasSetByUser" : 1,
     "compassEnabled" : 0
   }
 }

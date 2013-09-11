@@ -11,6 +11,8 @@ var arc = d3.svg.arc()
                 .innerRadius(iRadius)
                 .outerRadius(oRadius);
 
+console.log("ARC", arc);
+
 // generate sample data set
 var dataset = d3.range(6)
                 .map(function(index){
@@ -20,6 +22,9 @@ var dataset = d3.range(6)
 // declare pie() function
 var pie = d3.layout.pie();
 
+console.log("DATA", dataset, pie(dataset));
+
+
 var pieChart = d3.select("#jspiechart")
                 .append("svg")
                 .attr({
@@ -28,6 +33,8 @@ var pieChart = d3.select("#jspiechart")
                 });
 
 var color = d3.scale.category10();
+
+console.log("Color", color);
 
 var wedges = pieChart.selectAll("g")
                      .data(pie(dataset))
@@ -46,9 +53,12 @@ var wedges = pieChart.selectAll("g")
           'd' : arc
         });
 
+
+
 var labels =  wedges.append('text')
                     .attr({
                       'transform' : function (d) {
+                        console.log("arc.centroid(d) ", arc.centroid(d) );
                         return 'translate(' + arc.centroid(d) + ')';
                       },
                       'text-anchor' : 'middle'
