@@ -3,7 +3,6 @@ class PieChart
     @confirmation = ->
       console.log @data
     @target = d3.select(target)
-    @wedges = @piechart.selectAll("g")
     @data= @getData()
     @width = width || "500"
     @height = height || "500"
@@ -22,6 +21,7 @@ class PieChart
     @target.append("svg")
            .attr("width", @width)
            .attr("height", @height)
+
 
   wedges: () ->
     @pieChart().selectAll("g")
