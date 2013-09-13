@@ -1,7 +1,7 @@
 app = angular.module("d3Charts", [])
 
 app.controller 'chartCtrl', ($scope) ->
-  $scope.widgets = "20,22,23"
+  $scope.widgets = ""
 
 app.directive 'csBar', () ->
   restrict: "A"
@@ -11,7 +11,7 @@ app.directive 'csBar', () ->
 
   link:  (scope, element, attrs) ->
     element.bind("click", () ->
-      console.log "fuck this"
+      console.log "click this"
     )
     data = scope.widgets.split(",")
     chart = d3.select("#barchart")
@@ -19,27 +19,12 @@ app.directive 'csBar', () ->
       .attr("width", "100%")
       .attr("height", "400px")
     y = 0
-    chart.selectAll("svg")
-      .selectAll("rect")
-      .data(data)
-      .enter()
-      .append("rect")
-      .attr("height", "30px")
-      .attr("rx", "5")
-      .attr("ry", "5")
-      .classed("rect", true)
-      .attr("width", (datum) ->
-        datum 
-      )
-      .attr("y", (datum) ->
-        y += 35 
-      )
+    x = 0
 
     scope.$watch 'widgets', (n, o) ->
-
       newData = n.split(",") 
       oldData = o.split(",")
-      if oldData.length != newData.length
+      if n && oldData.length != newData.length
         console.log "length !="
         chart.selectAll("svg")
           .selectAll("rect")
@@ -50,21 +35,14 @@ app.directive 'csBar', () ->
           .attr("rx", "5")
           .attr("ry", "5")
           .classed("rect", true)
-          .attr("width", (datum) ->
-            datum 
-          )
-          .attr("y", (datum) ->
-            y += 35 
-          )
-      if n && oldData.length == newData.length
+          .attr("width", (datum) -> datum )
+          .attr("y", (datum) -> y += 35 )
+
+      if oldData.length == newData.length
         console.log "length =="
-        data = n.split(",")
-        x = 0
         chart.selectAll("svg")
           .selectAll("rect")
-          .data(data)
+          .data(newData)
           .transition()
-          .attr("width", (datum) ->
-            datum * 5 + "px" )
-          .attr("fill", (datum) ->
-            "#3366" + x +=10  )
+          .attr("width", (datum) -> datum )
+          .attr("fill", (datum) -> "#3366" + x +=1)
