@@ -5,7 +5,11 @@ html
   body
     div.row(ng-app="d3Charts")
       div.large-10.columns.large-centered.panel.radius(ng-controller="chartCtrl")
-        input(type="text", ng-model="widgets", placeholder="comma separated string of number... '20,30,40'")
+        input(type="text", ng-model="newVar", placeholder="add widgets")
+        button.small.radius.success(ng-click="addVar()")
+          add widgets
+        button.small.radius.alert(ng-click="removeVar()")
+          | remove last
         div.callout.panel.radius
           h4
             | {{widgets}}
