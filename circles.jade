@@ -5,9 +5,22 @@ html
   body
     div.row
       div.large-10.columns.large-centered.panel.radius
+        svg(height="400px", width="800px")
+          // circle(cx="100", cy="100", r="25")
+          // circle(cx="200", cy="100", r="35")
+          // circle(cx="300", cy="100", r="45")
+        button.small.success(id="selectCircles")
+          | selectCircles
+        button.small.success(id="changeX")
+          | changeX
+        button.small.success(id="create")
+          | create
+        button.small.success(id="removeOne")
+          | removeOne
 
     script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
     script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
     script(src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js")
     script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js")
     script(src="js/circles.js")
+
