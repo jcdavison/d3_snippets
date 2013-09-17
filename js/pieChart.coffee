@@ -17,6 +17,7 @@ class PieChart
     @pieChart = @target.append("svg")
                 .attr("width", @width)
                 .attr("height", @height)
+
     @color = d3.scale.category10().domain(d3.range(0,10))
     @wedges = @pieChart.selectAll("g")
             .data(@layout(@data))

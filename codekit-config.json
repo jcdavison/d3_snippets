@@ -40,17 +40,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/js\/angularBarChart.coffee" : {
+    "\/bar_chart.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/angularBarChart.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/angularBarChart.js",
+      "inputAbbreviatedPath" : "\/bar_chart.jade",
       "outputStyle" : 0,
-      "fileType" : 32
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/bar_chart.html",
+      "fileType" : 512
     },
     "\/js\/pieChart.js" : {
       "ignoreWasSetByUser" : 0,
@@ -61,6 +60,29 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/pieChart-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/barChart.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/barChart.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/barChart.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/js\/angularBarChart.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/angularBarChart.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/angularBarChart-ck.js",
       "fileType" : 64
     },
     "\/js\/barChart.js" : {
@@ -74,27 +96,14 @@
       "outputAbbreviatedPath" : "\/js\/barChart-ck.js",
       "fileType" : 64
     },
-    "\/js\/angularBarChart.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/angularBarChart.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/angularBarChart-ck.js",
-      "fileType" : 64
-    },
-    "\/bar_chart.jade" : {
+    "\/d3.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bar_chart.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/bar_chart.html",
-      "fileType" : 512
+      "inputAbbreviatedPath" : "\/d3.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/js\/d3-ck.js" : {
       "ignoreWasSetByUser" : 0,
@@ -130,15 +139,6 @@
       "outputAbbreviatedPath" : "\/js\/pie-ck-ck.js",
       "fileType" : 64
     },
-    "\/d3.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/d3.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/scatter_plot.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -148,15 +148,27 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/js\/barChart.coffee" : {
+    "\/js\/angularPieChart.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/barChart.coffee",
+      "inputAbbreviatedPath" : "\/js\/angularPieChart.coffee",
       "checkOutputStyle" : 0,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/barChart.js",
+      "outputAbbreviatedPath" : "\/js\/angularPieChart.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/js\/angularBarChart.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/angularBarChart.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/angularBarChart.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -202,6 +214,28 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
+    "\/angularPieChart.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/angularPieChart.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/angularPieChart.html",
+      "fileType" : 512
+    },
+    "\/js\/angularPieChart.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/angularPieChart.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/angularPieChart-ck.js",
+      "fileType" : 64
+    },
     "\/angular.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -233,16 +267,25 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/skeleton.jade" : {
+    "\/angularPieChart.html" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/skeleton.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/skeleton.html",
-      "fileType" : 512
+      "inputAbbreviatedPath" : "\/angularPieChart.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/js\/basicd3.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/basicd3.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/basicd3-ck.js",
+      "fileType" : 64
     },
     "\/skeleton.html" : {
       "ignoreWasSetByUser" : 0,
@@ -275,16 +318,16 @@
       "outputAbbreviatedPath" : "\/js\/scatterPlot-ck.js",
       "fileType" : 64
     },
-    "\/js\/basicd3.js" : {
+    "\/skeleton.jade" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/basicd3.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/basicd3-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/skeleton.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/skeleton.html",
+      "fileType" : 512
     }
   },
   "manualImportLinks" : [

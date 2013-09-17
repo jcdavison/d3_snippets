@@ -1,0 +1,28 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" href="foundation.css"/>
+    <link rel="stylesheet" href="d3.css"/>
+  </head>
+  <body>
+    <div ng-app="pieChart" class="row">
+      <div ng-controller="chartCtrl" class="large-10 columns large-centered panel radius">
+        <input type="text" ng-model="newVar" placeholder="add widgets"/>
+        <button ng-click="addVar()" class="small radius success">
+          <add>widgets</add>
+        </button>
+        <button ng-click="removeVar()" class="small radius alert">remove last</button>
+        <div ng-repeat="widget in widgets" class="callout panel radius">{{widget}} 
+          <div ng-click="increment($index)" ng-model="widget" class="button tiny success">increment</div>
+          <div ng-click="decrement($index)" ng-model="widget" class="button tiny success">decrement</div>
+        </div>
+        <div cs-bar="cs-bar" widgets="widgets"></div>
+      </div>
+    </div>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/angularPieChart.js"></script>
+  </body>
+</html>
