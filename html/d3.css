@@ -1,6 +1,6 @@
 .rect {
-  opacity: .5;
-  stroke: #336699;
+  fill: steelblue;
+  stroke: black;
 }
 
 .scatter {
