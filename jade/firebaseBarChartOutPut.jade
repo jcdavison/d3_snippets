@@ -1,0 +1,22 @@
+html
+  head
+    link(rel="stylesheet", href="foundation.css")
+    link(rel="stylesheet", href="d3.css")
+    title firebaseBarChartOutPut
+  body
+    div.row(ng-app="firecharts", ng-controller="chartCtrl")
+      div.large-10.columns.large-centered.panel.radius
+        span(ng-repeat="vote in votes")
+          | : {{vote.count}} :
+      div.row
+        div.large-12.columns.large-centered.panel.radius(cs-bar, votes="votes")
+
+    script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js")
+    script(src='https://cdn.firebase.com/v0/firebase.js')
+    script(src='https://cdn.firebase.com/v0/firebase-simple-login.js')
+    script(src="https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js")
+    script(src="js/firebaseBarChartOutPut.js")
+

@@ -1,0 +1,24 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" href="foundation.css"/>
+    <link rel="stylesheet" href="d3.css"/>
+    <title>firebaseBarChartOutPut</title>
+  </head>
+  <body>
+    <div ng-app="firecharts" ng-controller="chartCtrl" class="row">
+      <div class="large-10 columns large-centered panel radius"><span ng-repeat="vote in votes">: {{vote.count}} :</span></div>
+      <div class="row">
+        <div cs-bar="cs-bar" votes="votes" class="large-12 columns large-centered panel radius"></div>
+      </div>
+    </div>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+    <script src="js/firebaseBarChartOutPut.js"></script>
+  </body>
+</html>

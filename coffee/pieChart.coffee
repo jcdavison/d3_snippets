@@ -54,7 +54,7 @@ class PieChart
   bindReDraw: () ->
     $("#redraw").click =>
       newData = @getData()
-      
+      console.log @wedges     
       @wedges.data( @layout(newData) )
              .select('path')
              .transition()

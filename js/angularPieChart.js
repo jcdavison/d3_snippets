@@ -6,7 +6,7 @@
 
   app.controller('chartCtrl', function($scope) {
     var cleanWidgets, showWidgets;
-    $scope.widgets = [];
+    $scope.widgets = [1, 1, 1];
     $scope.newVar = "";
     $scope.addVar = function() {
       $scope.widgets.push(Number($scope.newVar));
@@ -26,10 +26,12 @@
     };
     $scope.increment = function(index) {
       $scope.widgets[index] = Number(this.widget) + 1;
+      cleanWidgets();
       return showWidgets();
     };
     return $scope.decrement = function(index) {
       $scope.widgets[index] = Number(this.widget) - 1;
+      cleanWidgets();
       return showWidgets();
     };
   });
@@ -42,31 +44,43 @@
       },
       template: '<div id="piechart">{{info}}</div>',
       link: function(scope, element, attrs) {
-        var arc, chart, color, height, iRadius, layout, oRadius, pieChart, width;
+        var arc, chart, color, height, iRadius, labels, layout, n, oRadius, pieChart, wedges, width,
+          _this = this;
         width = 500;
         height = 500;
         oRadius = width / 2;
         iRadius = 50;
+        n = scope.widgets;
         arc = d3.svg.arc().innerRadius(iRadius).outerRadius(oRadius);
         chart = d3.select("#piechart");
         pieChart = chart.append("svg").attr("width", width).attr("height", height);
         layout = d3.layout.pie();
         color = d3.scale.category10().domain(d3.range(0, 10));
-        return scope.$watch('widgets', function(n, o) {
-          var labels, wedges,
-            _this = this;
-          wedges = pieChart.selectAll("g").data(layout(n)).enter().append("g").attr({
-            "class": "wedge"
-          }).attr("transform", "translate(" + oRadius + "," + oRadius + ")");
-          wedges.append("path").attr("fill", function(d, i) {
-            return color(i);
-          }).attr('d', arc);
-          labels = wedges.append("text").attr('transform', function(d) {
-            return 'translate(' + arc.centroid(d) + ')';
-          }).attr('text-anchor', 'middle').text(function(d) {
-            return d.value;
-          });
+        wedges = pieChart.selectAll("g").data(layout(n)).enter().append("g").attr({
+          "class": "wedge"
+        }).attr("transform", "translate(" + oRadius + "," + oRadius + ")");
+        wedges.append("path").attr("fill", function(d, i) {
+          return color(i);
+        }).attr('d', arc);
+        labels = wedges.append("text").attr('transform', function(d) {
+          return 'translate(' + arc.centroid(d) + ')';
+        }).attr('text-anchor', 'middle').text(function(d) {
+          return d.value;
+        });
+        wedges.data(layout(n)).select('path').transition().duration(1000).ease('bounce').attr('fill', function(d, i) {
+          return color(i);
+        }).attr('d', arc);
+        labels.data(layout(n)).transition().duration(1000).attr('transform', function(d) {
+          return 'translate(' + arc.centroid(d) + ')';
+        }).attr('text-anchor', 'middle').text(function(d) {
+          return d.value;
+        });
+        return scope.$watch('widgets', function(o, n) {
+          var _this = this;
+          console.log("fuck this isn't working right");
+          console.log(wedges);
           wedges.data(layout(n)).select('path').transition().duration(1000).ease('bounce').attr('fill', function(d, i) {
+            console.log(color(i));
             return color(i);
           }).attr('d', arc);
           return labels.data(layout(n)).transition().duration(1000).attr('transform', function(d) {

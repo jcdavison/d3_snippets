@@ -3,24 +3,22 @@ html
     link(rel="stylesheet", href="foundation.css")
     link(rel="stylesheet", href="d3.css")
   body
-    div.row(ng-app="pieChart")
+    div.row(ng-app="d3Charts")
       div.large-10.columns.large-centered.panel.radius(ng-controller="chartCtrl")
         input(type="text", ng-model="newVar", placeholder="add widgets")
         button.small.radius.success(ng-click="addVar()")
           add widgets
         button.small.radius.alert(ng-click="removeVar()")
           | remove last
-        div.callout.panel.radius(ng-repeat="widget in widgets")
-          | {{widget}} 
-          .button.tiny.success(ng-click="increment($index)", ng-model="widget")
-            | increment
-          .button.tiny.success(ng-click="decrement($index)", ng-model="widget")
-            | decrement
+        div.callout.panel.radius
+          h4
+            | {{widgets}}
         div(cs-bar, widgets="widgets")
+
 
 
     script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
     script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
     script(src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js")
     script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js")
-    script(src="js/angularPieChart.js")
+    script(src="js/angularBarChart.js")

@@ -54,6 +54,7 @@
       return $("#redraw").click(function() {
         var newData;
         newData = _this.getData();
+        console.log(_this.wedges);
         _this.wedges.data(_this.layout(newData)).select('path').transition().duration(1000).ease('bounce').attr('fill', function(d, i) {
           return _this.color(i);
         }).attr('d', _this.arc);

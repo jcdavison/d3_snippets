@@ -50,7 +50,6 @@ app.directive 'csBar', () ->
         .attr("y", (datum) -> y += 30 )
         .attr("x", (datum) -> 0)
 
-
       chart.selectAll("svg")
         .selectAll("text")
         .data(n)
