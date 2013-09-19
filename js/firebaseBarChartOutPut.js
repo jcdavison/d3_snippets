@@ -21,43 +21,44 @@
       },
       template: '<div id="barchart"></div>',
       link: function(scope, element, attrs) {
-        var chart, funkyTown, y,
+        var addLabels, chart, height, padding, reDraw, reMove, width, xScale,
           _this = this;
         element.bind("click", function() {
           return console.log("click this");
         });
-        chart = d3.select("#barchart");
-        chart.append("svg").attr("width", "400").attr("height", "400");
-        y = 0;
-        funkyTown = function(data) {
-          return console.log("funky", data);
+        height = 400;
+        width = 600;
+        padding = 4;
+        chart = d3.select("#barchart").append("svg").attr("width", width).attr("height", height);
+        xScale = d3.scale.linear().domain([1, 10]).range([padding, width - padding]);
+        reDraw = function(data) {
+          return d3.selectAll("svg").selectAll("rect").data(_.pluck(data, "count")).enter().append("rect").attr("height", height / _.pluck(data, "count").length - padding).attr("rx", "5").attr("ry", "5").attr("width", function(datum) {
+            return xScale(datum);
+          }).attr("y", function(datum, index) {
+            return index * (height / _.pluck(data, "count").length);
+          }).attr("x", function(datum) {
+            console.log("reDraw");
+            return 0;
+          }).classed("rect", true);
+        };
+        reMove = function(data) {
+          console.log("reMove");
+          return chart.selectAll("rect").data(_.pluck(data, "count")).exit().transition().remove();
+        };
+        addLabels = function(data) {
+          return chart.selectAll("text").data(_.pluck(data, "count")).enter().append("text").text(function(d) {
+            return Math.round(d);
+          }).attr("y", function(datum, index) {
+            return index * (height / _.pluck(data, "count").length) + (.5 * height / _.pluck(data, "count").length - padding);
+          }).attr("x", function(datum) {
+            return Number(datum) + 5;
+          });
         };
         return scope.$watch('votes', function(n, o) {
-          var count;
-          if (n) {
-            count = _.pluck(n, "count");
-            if (_.every(count, _.isNumber()) === true) {
-              console.log("n:", count);
-              funkyTown(_.pluck(n, "count"));
-              chart.selectAll("svg").selectAll("rect").data(_.pluck(n, "count")).enter().append("rect").attr("height", "30px").attr("rx", "5").attr("ry", "5").classed("rect", true).attr("width", function(datum) {
-                return datum;
-              }).attr("y", function(datum) {
-                return y += 30;
-              }).attr("x", function(datum) {
-                return 0;
-              }).attr("fill", "steelblue").attr("stoke", "white");
-              console.log("this is the end");
-              chart.selectAll("svg").selectAll("text").data(count).enter().append("text").text(function(d) {
-                return Math.round(d);
-              }).attr("y", function(datum, index) {
-                console.log("y", y);
-                console.log("index", index);
-                return index * 10;
-              }).attr("x", function(datum) {
-                return Number(datum) + 5;
-              });
-              return chart.selectAll("svg").selectAll("rect").data(_.pluck(n, "count")).exit().transition().remove();
-            }
+          if (n && _.every(_.pluck(n, "count"), _.isNumber()) === true) {
+            reDraw(n);
+            reMove(n);
+            return addLabels(n);
           }
         });
       }
