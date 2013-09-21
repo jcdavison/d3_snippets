@@ -21,7 +21,7 @@
       },
       template: '<div id="barchart"></div>',
       link: function(scope, element, attrs) {
-        var addLabels, chart, height, padding, reDraw, reMove, width, xScale,
+        var addLabels, chart, draw, height, padding, reMove, width, xScale,
           _this = this;
         element.bind("click", function() {
           return console.log("click this");
@@ -31,18 +31,17 @@
         padding = 4;
         chart = d3.select("#barchart").append("svg").attr("width", width).attr("height", height);
         xScale = d3.scale.linear().domain([1, 10]).range([padding, width - padding]);
-        reDraw = function(data) {
+        draw = function(data) {
           return d3.selectAll("svg").selectAll("rect").data(_.pluck(data, "count")).enter().append("rect").attr("height", height / _.pluck(data, "count").length - padding).attr("rx", "5").attr("ry", "5").attr("width", function(datum) {
             return xScale(datum);
           }).attr("y", function(datum, index) {
             return index * (height / _.pluck(data, "count").length);
           }).attr("x", function(datum) {
-            console.log("reDraw");
+            console.log("draw triggered");
             return 0;
           }).classed("rect", true);
         };
         reMove = function(data) {
-          console.log("reMove");
           return chart.selectAll("rect").data(_.pluck(data, "count")).exit().transition().remove();
         };
         addLabels = function(data) {
@@ -56,10 +55,13 @@
         };
         return scope.$watch('votes', function(n, o) {
           if (n && _.every(_.pluck(n, "count"), _.isNumber()) === true) {
-            reDraw(n);
+            console.log("new scope.votes", _.pluck(n, "count"));
+            console.log("old scope.votes", _.pluck(o, "count"));
+            draw(n);
             reMove(n);
-            return addLabels(n);
+            addLabels(n);
           }
+          return true;
         });
       }
     };

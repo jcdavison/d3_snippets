@@ -30,7 +30,7 @@ app.directive 'csBar', () ->
       .domain([1,10])
       .range([padding, width - padding])
 
-    reDraw = (data) ->
+    draw = (data) ->
       d3.selectAll("svg")
         .selectAll("rect")
         .data(_.pluck(data,"count"))
@@ -43,12 +43,11 @@ app.directive 'csBar', () ->
           xScale(datum) )
         .attr("y", (datum, index) -> index * (height / _.pluck(data,"count").length) )
         .attr("x", (datum) -> 
-          console.log "reDraw"
+          console.log "draw triggered"
           0)
         .classed("rect", true)
 
     reMove = (data) ->
-      console.log "reMove"
       chart.selectAll("rect")
         .data(_.pluck(data,"count"))
         .exit()
@@ -69,9 +68,12 @@ app.directive 'csBar', () ->
 
     scope.$watch 'votes', (n, o) =>
       if n && _.every(_.pluck(n,"count"), _.isNumber()) is true
+        console.log "new scope.votes", _.pluck(n,"count")
+        console.log "old scope.votes", _.pluck(o,"count")
 
-        reDraw(n)
+        draw(n)
         reMove(n)
         addLabels(n)
+      true
 
 
