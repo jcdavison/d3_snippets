@@ -32,7 +32,7 @@
         chart = d3.select("#barchart").append("svg").attr("width", width).attr("height", height);
         xScale = d3.scale.linear().domain([1, 10]).range([padding, width - padding]);
         draw = function(data) {
-          return d3.selectAll("svg").selectAll("rect").data(_.pluck(data, "count")).enter().append("rect").attr("height", height / _.pluck(data, "count").length - padding).attr("rx", "5").attr("ry", "5").attr("width", function(datum) {
+          return chart.selectAll("rect").data(_.pluck(data, "count")).enter().append("rect").attr("height", height / _.pluck(data, "count").length - padding).attr("rx", "5").attr("ry", "5").attr("width", function(datum) {
             return xScale(datum);
           }).attr("y", function(datum, index) {
             return index * (height / _.pluck(data, "count").length);
@@ -58,7 +58,6 @@
             console.log("new scope.votes", _.pluck(n, "count"));
             console.log("old scope.votes", _.pluck(o, "count"));
             draw(n);
-            reMove(n);
             addLabels(n);
           }
           return true;

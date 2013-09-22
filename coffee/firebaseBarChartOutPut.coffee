@@ -31,8 +31,9 @@ app.directive 'csBar', () ->
       .range([padding, width - padding])
 
     draw = (data) ->
-      d3.selectAll("svg")
-        .selectAll("rect")
+      # d3.selectAll("svg")
+      
+      chart.selectAll("rect")
         .data(_.pluck(data,"count"))
         .enter()
         .append("rect")
@@ -72,7 +73,7 @@ app.directive 'csBar', () ->
         console.log "old scope.votes", _.pluck(o,"count")
 
         draw(n)
-        reMove(n)
+        # reMove(n)
         addLabels(n)
       true
 
